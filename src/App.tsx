@@ -44,9 +44,7 @@ export default function CatchAllRoute() {
   if (notFound && !isPreviewingInBuilder) {
     return <div>Not Found</div>;
   }
-  const [isOpen, setIsOpen] = useState(false);
 
-  // return the page when found
   return (
     <>
       <Header />

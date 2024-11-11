@@ -5,7 +5,7 @@ interface HamburgerProps {
 }
 export default function Hamburger(props: HamburgerProps) {
   return (
-    <div className="absolute md:flex p-8 rounded-lg md:rounded-none shadow-lg md:shadow-none">
+    <div className="absolute md:flex p-8 right-0 top-0 rounded-lg md:rounded-none shadow-lg md:shadow-none">
       <svg
         onClick={props.clickHandler}
         id="hamburger"

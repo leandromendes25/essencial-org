@@ -3,6 +3,7 @@ import Hamburger from "./Hamburger";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
   const triggerAnimation = () => {
     setIsOpen((isOpen) => {
       return !isOpen;
@@ -15,7 +16,7 @@ export default function Header() {
         className="w-40 bg-contain"
         alt="Essencial Serviços logo"
       />
-      <div className="flex  	">
+      <div className="flex ">
         <Hamburger clickHandler={triggerAnimation} boolean={isOpen} />
       </div>
     </header>
