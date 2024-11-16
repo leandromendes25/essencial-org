@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "./Logo";
 
 interface FooterProps {
   url?: string; // Torna `url` opcional com '?'
@@ -6,7 +7,8 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ url = "#" }) => {
   return (
-    <footer className="bg-slate-700 p-4 justify-center flex relative">
+    <footer className="bg-slate-700 p-4 flex justify-between relative bottom-0">
+      <Logo />
       <button className="flex items-center gap-2" title="Clique aqui">
         <p className="text-white">Siga-nos em nosso Instagram:</p>
         <a id="contato" href={url} target="_blank" rel="noopener noreferrer">

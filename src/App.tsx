@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
-import Footer from "./components/Footer";
-import Whatsapp from "./components/Whatsapp";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 // Put your API key here
@@ -47,7 +46,6 @@ export default function CatchAllRoute() {
 
   return (
     <>
-      <Header />
       <main className="p-4">
         <BuilderComponent model="page" content={content} />
       </main>

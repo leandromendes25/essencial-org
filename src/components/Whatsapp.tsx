@@ -2,10 +2,10 @@ interface WhatsAppProps {
   telephone: string;
 }
 
-const WhatsApp = (props: WhatsAppProps) => (
+const WhatsApp = ({ telephone }: WhatsAppProps) => (
   <a
     className="absolute right-2 bottom-4 z-10 md:right-6 md:bottom-8"
-    href={`https://wa.me/${props.telephone}`}
+    href={`https://wa.me/${telephone}`}
     target="_blank"
     rel="noopener noreferrer"
   >

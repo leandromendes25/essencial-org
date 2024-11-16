@@ -1,23 +1,28 @@
 import React, { useState } from "react";
-import Hamburger from "./Hamburger";
+import MenuHeader from "./MenuHeader";
+import Logo from "./Logo";
 
-export default function Header() {
+interface HeaderProps {
+  telefone: string;
+}
+export default function Header({ telefone }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const triggerAnimation = () => {
+  const toggleModal = () => {
     setIsOpen((isOpen) => {
       return !isOpen;
     });
   };
+
   return (
-    <header className="flex gap-4 justify-between relative">
-      <img
-        src="/public/services.jpg"
-        className="w-40 bg-contain"
-        alt="Essencial Serviços logo"
-      />
+    <header className="flex gap-4 justify-between sticky top-20">
+      <Logo />
       <div className="flex ">
-        <Hamburger clickHandler={triggerAnimation} boolean={isOpen} />
+        <MenuHeader
+          telefone={telefone}
+          handlerOpenCloseMenu={toggleModal}
+          isOpen={isOpen}
+        />
       </div>
     </header>
   );
