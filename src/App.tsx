@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-const API_KEY = import.meta.env.API_KEY;
-
+const API_KEY = import.meta.env.VITE_BUILD_API_KEY;
 builder.init(API_KEY);
 
 export default function CatchAllRoute() {
