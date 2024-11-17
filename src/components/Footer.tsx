@@ -7,7 +7,10 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ url = "#" }) => {
   return (
-    <footer className="bg-slate-700 p-4 flex justify-between relative bottom-0">
+    <footer
+      className="bg-slate-700 p-4 flex justify-between 
+    relative w-full mr-auto ml-auto  max-w-7xl "
+    >
       <Logo />
       <button className="flex items-center gap-2" title="Clique aqui">
         <p className="text-white">Siga-nos em nosso Instagram:</p>

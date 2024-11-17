@@ -40,7 +40,7 @@ export default function MenuHeader({
             } md:flex`}
           >
             <li className="font-bold   hover:underline hover:cursor-pointer">
-              Trabalhos Realizados
+              <a href="#realizados">Trabalhos Realizados</a>
             </li>
 
             <li className="">

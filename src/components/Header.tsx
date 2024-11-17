@@ -15,7 +15,7 @@ export default function Header({ telefone }: HeaderProps) {
   };
 
   return (
-    <header className="flex gap-4 justify-between sticky top-20">
+    <header className="flex gap-4 justify-between sticky top-20 max-w-7xl ">
       <Logo />
       <div className="flex ">
         <MenuHeader
