@@ -27,9 +27,5 @@ export default function CatchAllRoute() {
   if (notFound && !isPreviewingInBuilder) {
     return <div>Not Found</div>;
   }
-  return (
-    <>
-      <BuilderComponent model="page" content={content} />
-    </>
-  );
+  return <BuilderComponent model="page" content={content} />;
 }

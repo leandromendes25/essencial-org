@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  font-family: 'Inter', sans-serif;
+body {
+  font-family: "Inter", sans-serif;
 }
-
 
 #top-line,
 #bottom-line,
@@ -25,7 +24,78 @@ body{
 .triggeredAnimation #middle-line {
   animation: hide 0.6s ease-out forwards;
 }
+.fade-in-element{
+	view-timeline-name: --revealing-image;
+	view-timeline-axis: block;
 
+	animation: linear reveal both;
+	animation-timeline: --revealing-image;
+
+	animation-range: entry 25% cover 50%;
+}
+.wtp {
+  @apply shadow-lg;
+  animation: whatsappAnimation 5s linear infinite;
+}
+.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeInLeftBig {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(-2000px, 0, 0);
+  transform: translate3d(-2000px, 0, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  }
+  @keyframes fadeInLeftBig {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(-2000px, 0, 0);
+  transform: translate3d(-2000px, 0, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  } 
+@keyframes reveal {
+	from {
+		opacity: 0;
+		clip-path: inset(45% 20% 45% 20%);
+	}
+	to {
+		opacity: 1;
+		clip-path: inset(0% 0% 0% 0%);
+	}
+}
+@keyframes whatsappAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes up-rotate {
   0% {
     animation-timing-function: cubic-bezier(0.16, -0.88, 0.97, 0.53);

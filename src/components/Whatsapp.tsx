@@ -1,16 +1,11 @@
-interface WhatsAppProps {
-  telephone: string;
-}
-
-const WhatsApp = ({ telephone }: WhatsAppProps) => (
+const WhatsApp = () => (
   <a
-    className="absolute right-2 bottom-4 z-10 md:right-6 md:bottom-8"
-    href={`https://wa.me/${telephone}`}
+    className="fixed right-3 bottom-[16%] z-10 md:right-3 cursor-pointer lg:bottom-[9%]"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
-      className="max-w-14"
+      className="w-12 wtp "
       src="/assets/whatsapp.svg"
       alt="Clique para falar conosco em nosso WhatsApp"
     />

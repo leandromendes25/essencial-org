@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import MenuHeader from "./MenuHeader";
 import Logo from "./Logo";
-
 interface HeaderProps {
-  telefone: string;
+  type: "button" | "submit";
+  label: string;
 }
-export default function Header({ telefone }: HeaderProps) {
+export default function Header({ type, label }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
@@ -15,14 +15,17 @@ export default function Header({ telefone }: HeaderProps) {
   };
 
   return (
-    <header className="flex gap-4 justify-between sticky top-20 max-w-7xl ">
-      <Logo />
-      <div className="flex ">
-        <MenuHeader
-          telefone={telefone}
-          handlerOpenCloseMenu={toggleModal}
-          isOpen={isOpen}
-        />
+    <header className="w-full bg-white shadow-md justify-between border-t-gray-400 border-2">
+      <div className="max-w-7xl w-full mx-auto flex justify-between">
+        <Logo />
+        <div className="flex ">
+          <MenuHeader
+            type={type ?? "button"}
+            label={label ?? "Contato"}
+            handlerOpenCloseMenu={toggleModal}
+            isOpen={isOpen}
+          />
+        </div>
       </div>
     </header>
   );

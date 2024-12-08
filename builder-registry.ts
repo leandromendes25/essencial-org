@@ -13,17 +13,15 @@ Builder.registerComponent(Footer, {
 });
 
 Builder.registerComponent(Whatsapp, {
-  name: 'Whatsapp',
-  inputs: [{ name: 'telephone', type: 'string' ,required: true, helperText: 'Digite o número de telefone'}]
+  name: 'Whatsapp'
 });
 Builder.registerComponent(Button, {
   name: 'Button',
-  inputs: [{ name: 'text', type: 'string' ,required: true, helperText: 'Digite o texto'},
-    { name: 'telefone', type: 'string' ,helperText: 'Digite o número de telefone'}
+  inputs: [{ name: 'label', type: 'string' ,required: true, helperText: 'Digite o texto'},
+    { name: 'type', type: 'string' ,helperText: 'Digite o tipo do botão'}
+
   ]
 });
 Builder.registerComponent(Header, {
   name: 'Header',
-  inputs: [{ name: 'telefone', type: 'string' , required: true, helperText: 'Digite o número de telefone'}
-  ]
 });

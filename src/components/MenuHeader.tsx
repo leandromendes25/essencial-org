@@ -1,18 +1,24 @@
 import { MouseEventHandler } from "react";
-import ButtonContactHref from "./ButtonContactHref";
+import Button from "./Button";
 
 interface MenuHeaderProps {
   isOpen: boolean;
   handlerOpenCloseMenu: MouseEventHandler<SVGSVGElement>;
-  telefone: string;
+  type: "button" | "submit";
+  label: string;
 }
 export default function MenuHeader({
   isOpen,
   handlerOpenCloseMenu,
-  telefone,
+  type,
+  label,
 }: MenuHeaderProps) {
   return (
-    <div className="absolute md:flex p-8 right-0 top-0 rounded-lg md:rounded-none shadow-lg md:shadow-none">
+    <div
+      className={`absolute bg-white md:static md:flex p-8 right-0 top-0 ${
+        isOpen ? "shadow-md" : ""
+      }`}
+    >
       <svg
         onClick={handlerOpenCloseMenu}
         id="hamburger"
@@ -39,12 +45,14 @@ export default function MenuHeader({
               isOpen ? "block" : "hidden"
             } md:flex`}
           >
-            <li className="font-bold   hover:underline hover:cursor-pointer">
-              <a href="#realizados">Trabalhos Realizados</a>
+            <li className="font-bold hover:underline hover:cursor-pointer transition-all ease-in-out duration-200 hover:text-gray-400">
+              <a className="" href="#realizados">
+                Trabalhos Realizados
+              </a>
             </li>
 
             <li className="">
-              <ButtonContactHref telefone={telefone ?? ""} />
+              <Button type={type} label={label} />
             </li>
           </ul>
         </nav>
